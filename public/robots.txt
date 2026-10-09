@@ -1,0 +1,21 @@
+# ==========================================
+# Robots.txt for Sanambio Camel Joint Balm Store
+# Optimized for Googlebot, Bingbot & AI Crawlers
+# ==========================================
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Explicit instructions for Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Sitemap index
+Sitemap: https://sanambio.ma/sitemap.xml
+Sitemap: https://sanambio.vercel.app/sitemap.xml

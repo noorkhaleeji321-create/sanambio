@@ -1,0 +1,6 @@
+{
+  "name": "Sanambio - دهن سنام الجمل الأصلي",
+  "description": "صفحة هبوط احترافية لترويج دهن سنام الجمل Sanambio الطبيعي لآلام المفاصل والظهر مع لوحة تحكم إدارية متكاملة للمتجر والطلبات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

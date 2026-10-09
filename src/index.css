@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: #e2e8f0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+  }
+  
+  /* Hide scrollbar completely across all webkit browsers */
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    height: 0px;
+    background: transparent;
+  }
+
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s infinite ease-in-out;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float-slow 4s infinite ease-in-out;
+}
+
+/* Continuous Seamless Gapless Two-Track Marquee (Left to Right) */
+@keyframes continuous-marquee-scroll-rtl-motion {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.continuous-marquee-wrapper {
+  direction: ltr !important;
+  display: flex !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  user-select: none;
+}
+
+.continuous-marquee-track {
+  display: flex !important;
+  flex-shrink: 0 !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  animation: continuous-marquee-scroll-rtl-motion 30s linear infinite !important;
+  will-change: transform;
+}
+
+.continuous-marquee-wrapper:hover .continuous-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Floating Emoji, Hearts & Stars Background Animations */
+@keyframes float-particle-1 {
+  0% {
+    transform: translateY(105vh) translateX(0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateY(50vh) translateX(25px) rotate(18deg) scale(1.05);
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(-20px) rotate(-15deg) scale(0.9);
+    opacity: 0;
+  }
+}
+
+@keyframes float-particle-2 {
+  0% {
+    transform: translateY(105vh) translateX(0) rotate(0deg) scale(0.9);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(50vh) translateX(-35px) rotate(-22deg) scale(1.1);
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(25px) rotate(20deg) scale(0.85);
+    opacity: 0;
+  }
+}
+
+@keyframes float-particle-3 {
+  0% {
+    transform: translateY(105vh) translateX(0) rotate(0deg) scale(0.7);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(50vh) translateX(15px) rotate(10deg) scale(1);
+    opacity: 0.75;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(-10px) rotate(-10deg) scale(0.75);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-pulse {
+  0%, 100% {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.25) rotate(180deg);
+    opacity: 0.9;
+  }
+}
+
+.animate-float-p1 {
+  animation: float-particle-1 linear infinite;
+  will-change: transform, opacity;
+}
+
+.animate-float-p2 {
+  animation: float-particle-2 linear infinite;
+  will-change: transform, opacity;
+}
+
+.animate-float-p3 {
+  animation: float-particle-3 linear infinite;
+  will-change: transform, opacity;
+}
+
+.animate-sparkle-pulse {
+  animation: sparkle-pulse 3s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Rotating Animated Glowing Border for Delivery Form Inputs */
+@keyframes rotating-border-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-border-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 2.5px;
+  background: #fde68a;
+  box-shadow: 0 3px 12px -2px rgba(217, 119, 6, 0.25);
+  transition: all 0.3s ease;
+}
+
+.rotating-border-card:hover,
+.rotating-border-card:focus-within {
+  box-shadow: 0 4px 20px -1px rgba(217, 119, 6, 0.45);
+}
+
+.rotating-border-card::before {
+  content: '';
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 400%;
+  height: 400%;
+  background: conic-gradient(
+    transparent 0deg,
+    #b45309 30deg,
+    #f59e0b 70deg,
+    #fef08a 100deg,
+    #d97706 130deg,
+    transparent 180deg,
+    #b45309 210deg,
+    #f59e0b 250deg,
+    #fef08a 280deg,
+    #d97706 310deg,
+    transparent 360deg
+  );
+  animation: rotating-border-spin 3s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.rotating-border-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: #ffffff;
+  border-radius: calc(1rem - 2.5px);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  display: flex;
+  align-items: center;
+}
+
+/* Print Invoice Styles */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-invoice, #printable-invoice * {
+    visibility: visible;
+  }
+  #printable-invoice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white;
+    color: black;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

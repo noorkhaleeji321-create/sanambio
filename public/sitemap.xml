@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://sanambio.ma/</loc>
+    <lastmod>2026-10-08T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://sanambio.ma/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sanambio.ma/" />
+    <image:image>
+      <image:loc>https://ecowrkizfpmcpsyzvvze.supabase.co/storage/v1/object/public/store_media/images/camel_joint_cream_jar.jpg</image:loc>
+      <image:title>دهن سنام الجمل Sanambio® الأصلي لعلاج المفاصل والركبة بالمغرب</image:title>
+      <image:caption>علبة دهن سنام الجمل الطبيعي الخالص 100% لعلاج خشونة الركبة وآلام أسفل الظهر وعرق النسا</image:caption>
+      <image:geo_location>Morocco</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://ecowrkizfpmcpsyzvvze.supabase.co/storage/v1/object/public/store_media/images/hero_camel_balm_desert.jpg</image:loc>
+      <image:title>دهن سنام الجمل الطبيعي من صحراء المغرب</image:title>
+      <image:caption>شحم سنام الإبل الصحراوي الأصيل مع الأعشاب والزيوت المعالجة للروماتيزم</image:caption>
+      <image:geo_location>Morocco</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://ecowrkizfpmcpsyzvvze.supabase.co/storage/v1/object/public/store_media/images/joint_relief_anatomical.jpg</image:loc>
+      <image:title>تغذية السائل الزلالي وترميم غضاريف الركبة والمفاصل</image:title>
+      <image:caption>تركيبة تخترق عمق الأنسجة لتهدئة الاحتكاك والالتهاب</image:caption>
+      <image:geo_location>Morocco</image:geo_location>
+    </image:image>
+  </url>
+</urlset>
